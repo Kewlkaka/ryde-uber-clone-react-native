@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# Ryde an Uber Clone 🚗
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, full-featured Uber clone built with React Native. This app replicates key features of Uber including real-time geolocation, authentication, ride requests, and more.
 
-## Get started
+---
 
-1. Install dependencies
+## 🛠 Tech Stack
+
+- React Native
+- Expo
+- Serverless PostgreSQL
+- Clerk
+- Geoapify and Google Maps
+- Zustand
+- Tailwind CSS
+
+---
+
+## 🚀 Features
+
+- **Onboarding**: Seamless user registration and setup process.
+- **Email Password Auth with Verification**: Secure login with email verification via Clerk.
+- **Home Screen with Live Location & Google Map**: Real-time location tracking with markers on a map.
+- **Google Places Autocomplete**: Search any place with autocomplete suggestions.
+- **Find Rides**: Search for rides by entering 'From' and 'To' locations.
+- **Select Rides from Map**: Choose available cars near your location from the map.
+- **Confirm Rides**: View complete ride details, including time and fare price.
+- **Responsive on Android and iOS**: Optimized for both Android and iOS devices.
+
+---
+
+## 📱 Screenshots
+
+Coming soon...
+
+---
+
+## 📦 Installation & Setup
+
+To get the app up and running on your local machine:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/Kewlkaka/ryde-uber-clone-react-native.git
+   cd ryde-uber-clone-react-native
+   ```
+
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Set up environment variables:
+
+   - Create a `.env` file in the root directory and add your API keys for Google Maps, Clerk, and Neon Postgres.
 
    ```bash
-    npx expo start
+   EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_api_key
+   EXPO_PUBLIC_SERVER_URL=https://uber.com/
+   EXPO_PUBLIC_GEOAPIFY_API_KEY=your_geoapify_key
+   EXPO_PUBLIC_GOOGLE_API_KEY=your_google_maps_api_key
+   DATABASE_URL=your_neon_postgres_url
    ```
 
-In the output, you'll find options to open the app in a
+4. Start the Expo development server:
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+   ```bash
+   npx expo start
+   ```
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+---
 
-## Get a fresh project
+## ⚙️ Backend Setup (Neon Postgres)
 
-When you're ready, run:
+This app uses Neon for a serverless PostgreSQL backend. You can set up your database using the following steps:
 
-```bash
-npm run reset-project
-```
+1. Go to [Neon](https://neon.tech/) and create a new serverless PostgreSQL database.
+2. Update the database connection URL in your `.env` file as `DATABASE_URL`.
+3. Migrate the database schema.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🤝 Contributing
 
-To learn more about developing your project with Expo, look at the following resources:
+Feel free to open issues or submit pull requests! Contributions, feedback, and suggestions are highly appreciated.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
